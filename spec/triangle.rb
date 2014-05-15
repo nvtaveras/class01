@@ -33,6 +33,10 @@ class Triangle
   	end
 
   	def impossible_length_side?
+  		if( (@a <=0) || (@b <= 0) || (@c <= 0) ) 
+  			return true
+  		end
+  		return false
   	end
 
 end
