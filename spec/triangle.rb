@@ -16,6 +16,7 @@ class Triangle
 	end
 
 	def equilateral?
+		return (@a == @b) && (@b == @c)
   	end
 
   	def isosceles?
