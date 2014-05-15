@@ -8,6 +8,16 @@ class Triangle
 	end
 
 	def kind
+		if(illegal?)
+			raise "Mmm... i think that triagle isn't valid"
+		end
+		if(equilateral?)
+			return "Equilateral"
+		end
+		if(isosceles?)
+			return "Isosceles"
+		end
+		"Scalene"
 	end
 
 	private
@@ -23,9 +33,6 @@ class Triangle
   		return (@a == @b) || (@a == c) || (@b == c);
   	end
 
-  	def illegal?
-  	end
-
   	def violates_inequality?
   		if( (@a + @b <= @c) || (@a + @c <= @b) || (@b + @c <= @a) )
   			return true
@@ -38,6 +45,10 @@ class Triangle
   			return true
   		end
   		return false
+  	end
+
+  	def illegal?
+  		return ( violates_inequality? || impossible_length_side? )
   	end
 
 end
