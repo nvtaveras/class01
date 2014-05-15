@@ -26,7 +26,7 @@ class Triangle
   	end
 
   	def violates_inequality?
-  		if( (@a + @b < c) || (@a + @c < b) || (@b + @c < a) )
+  		if( (@a + @b < @c) || (@a + @c < @b) || (@b + @c < @a) )
   			return true
   		end
   		return false
