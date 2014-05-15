@@ -26,6 +26,10 @@ class Triangle
   	end
 
   	def violates_inequality?
+  		if( (@a + @b < c) || (@a + @c < b) || (@b + @c < a) )
+  			return true
+  		end
+  		return false
   	end
 
   	def impossible_length_side?
