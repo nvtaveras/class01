@@ -20,6 +20,7 @@ class Triangle
   	end
 
   	def isosceles?
+  		return (@a == @b) || (@a == c) || (@b == c);
   	end
 
   	def illegal?
