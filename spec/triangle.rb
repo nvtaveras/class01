@@ -27,14 +27,14 @@ class Triangle
   	end
 
   	def violates_inequality?
-  		if( (@a + @b < @c) || (@a + @c < @b) || (@b + @c < @a) )
+  		if( (@a + @b <= @c) || (@a + @c <= @b) || (@b + @c <= @a) )
   			return true
   		end
   		return false
   	end
 
   	def impossible_length_side?
-  		if( (@a <=0) || (@b <= 0) || (@c <= 0) ) 
+  		if( (@a <= 0) || (@b <= 0) || (@c <= 0) ) 
   			return true
   		end
   		return false
