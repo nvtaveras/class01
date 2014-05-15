@@ -14,6 +14,15 @@ describe Triangle do
 			end
 		end
 
+		context "with incorrect params" do
+			it "should raise an error" do
+				t = Triangle.new(1, 1, 0);
+				expect {t.kind()}.to raise_error
+				t = Triangle.new(1, 1, 2);
+				expect {t.kind()}.to raise_error
+			end
+		end
+
 	end
 
 end
